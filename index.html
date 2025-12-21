@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法楽寺おみくじ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="passwordScreen" class="password-screen">
+            <div class="lock-icon">🔒</div>
+            <h1 class="password-title">法楽寺無料おみくじ2026</h1>
+            <p class="password-desc">パスワードを入力してください</p>
+            <input type="password" id="passwordInput" class="password-input" placeholder="パスワード" maxlength="8">
+            <button id="checkBtn" class="password-btn" type="button">確認</button>
+            <div id="errorMessage" class="error-message">パスワードが正しくありません</div>
+        </div>
+
+        <div id="omikujiScreen" class="omikuji-screen">
+            <div class="temple-header">
+                <h1 class="temple-title">法楽寺無料おみくじ2026</h1>
+                <p class="temple-subtitle">一年の運勢を占います</p>
+            </div>
+
+            <div class="instructions">
+                心を落ち着けて、<br>「おみくじを引く」ボタンを押してください
+            </div>
+
+            <div class="omikuji-box">
+                <button id="drawBtn" class="omikuji-button" onclick="drawOmikuji()">おみくじを引く</button>
+                
+                <div id="powerChargeContainer" class="power-charge-container">
+                    <div id="countdownArea" class="countdown-area">
+                        <p class="countdown-message">お祈りパワーを<br>画面を連続タップで充填してください!</p>
+                        <div id="countdownNumber" class="countdown-number">3</div>
+                    </div>
+                    
+                    <div id="gameArea" class="game-area" style="display:none;">
+                        <p class="power-charge-title">お祈りパワーを充填!</p>
+                        
+                        <div class="power-gauge-wrapper">
+                            <div class="power-gauge" id="powerGauge">
+                                <div class="power-gauge-fill" id="powerGaugeFill"></div>
+                                <div class="power-percentage" id="powerPercentage">0%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tap-area" id="tapArea">
+                            <div class="tap-icon">👆</div>
+                            <p class="tap-instruction">ここをタップ!</p>
+                        </div>
+                        
+                        <div class="cheer-message" id="cheerMessage">がんばれ!</div>
+                        <div class="tap-counter-display" id="tapCountDisplay">タップ数: 0</div>
+                    </div>
+                </div>
+                
+                <!-- 終了ボタン(管理者モード用) -->
+                <button id="exitBtn">おみくじを終了</button>
+            </div>
+
+            <div id="adminNavigation" class="admin-navigation">
+                <button id="prevBtn" class="admin-btn" onclick="showPrevious()">◀ 前へ</button>
+                <span id="adminCounter" class="admin-counter">1 / 54</span>
+                <button id="nextBtn" class="admin-btn" onclick="showNext()">次へ ▶</button>
+            </div>
+
+            <div class="result-section">
+                <div id="resultCard" class="result-card">
+                    <div id="resultNumber" class="result-number"></div>
+                    <div id="resultFortune" class="result-fortune"></div>
+                    <div id="resultMessage" class="result-message"></div>
+                    <div id="resultGod" class="result-god"></div>
+                </div>
+            </div>
+
+            <div id="worshipGuide" class="worship-guide">
+                <h2 class="worship-guide-title">薬師堂で参拝されまして<br>より深いご利益をお授かりください<br>ご縁仏の配置は画面一番下を参照下さい。</h2>
+                <div class="temple-images">
+                    <div class="temple-item">
+                        <img src="image/1yakushidou.jpg" alt="薬師堂">
+                        <p class="temple-label">薬師堂</p>
+                    </div>
+                    <div class="temple-item">
+                        <img src="image/2kouryuukaku.jpg" alt="光龍閣">
+                        <p class="temple-label">光龍閣</p>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h3 class="map-title">法楽寺見取り図</h3>
+                    <div class="map-container">
+                        <img src="image/3mitorizu.jpg" alt="法楽寺見取り図" class="temple-map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=20250101"></script>
+</body>
+</html>
