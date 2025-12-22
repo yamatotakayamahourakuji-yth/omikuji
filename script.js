@@ -72,11 +72,11 @@ const omikujiResults = [
     { number: 44, fortune: "大吉", message: "今年は大躍進を遂げるでしょう", god: "薬師如来", godReading: "やくしにょらい", godNumber: 1, weight: 2 },
     { number: 45, fortune: "みな吉", message: "自分と周囲が皆幸せな一年でしょう", god: "十一面観音菩薩", godReading: "じゅういちめんかんのんぼさつ", godNumber: 4, weight: 2 },
     { number: 46, fortune: "堅実吉", message: "とにかくまじめに頑張れば結果が出ます", god: "帝釈天", godReading: "たいしゃくてん", godNumber: 5, weight: 2 },
-    { number: 47, fortune: "変化吉", message: "思ってる事をやってみましょう", god: "毘沙門天", godReading: "びしゃもんてん", godNumber: 5, weight: 2 },
+    { number: 47, fortune: "変化吉", message: "思ってる事をやってみましょう", god: "青面金剛", godReading: "しょうめんこんごう", godNumber: 5, weight: 2 },
     { number: 48, fortune: "中吉", message: "金運が良いでしょう", god: "大黒天", godReading: "だいこくてん", godNumber: 8, weight: 1 },
     { number: 49, fortune: "通い吉", message: "毎月パワースポットを巡ると幸運キープ", god: "三十三観音", godReading: "さんじゅうさんかんのん", godNumber: 12, weight: 2 },
     { number: 50, fortune: "旅吉", message: "いつか行きたい場所へ今年行きましょう", god: "弘法大師", godReading: "こうぼうだいし", godNumber: 9, weight: 2 },
-    { number: 51, fortune: "縁切り吉", message: "悪縁、腐れ縁がやっと切れます", god: "青面金剛", godReading: "しょうめんこんごう", godNumber: 10, weight: 2 },
+    { number: 51, fortune: "縁切り吉", message: "悪縁、腐れ縁がやっと切れます", god: "伊舎那天", godReading: "いざなてん", godNumber: 5, weight: 2 },
     { number: 52, fortune: "小吉", message: "もやもやが全て水に流せます", god: "水天", godReading: "すいてん", godNumber: 5, weight: 2 },
     { number: 53, fortune: "鬼吉", message: "強い心が身に付く年になります", god: "不動明王", godReading: "ふどうみょうおう", godNumber: 7, weight: 1 },
     { number: 54, fortune: "守護吉", message: "振れない心を得られる自信が付くでしょう", god: "不動明王", godReading: "ふどうみょうおう", godNumber: 7, weight: 1 }
