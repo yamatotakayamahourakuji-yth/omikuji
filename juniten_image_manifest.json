@@ -1,0 +1,158 @@
+[
+  {
+    "number": "⑤_1",
+    "name": "羅刹天",
+    "filename": "image/⑤_1.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "b575e6e4c9b5c287b4e2de7f06128f85a5d6a44ab0b877fed8379ec75ef66f4c",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_2",
+    "name": "水天",
+    "filename": "image/⑤_2.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "4e84a9aa6d720798f28aa1972ada25f26176b1300c53b732d712c39c0e131ae3",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_3",
+    "name": "風天",
+    "filename": "image/⑤_3.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "5a2db7521cbc1ff58fa182376fb4f7717c4f8e9cc6114a738c34d86bebfc4948",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_4",
+    "name": "毘沙門天",
+    "filename": "image/⑤_4.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "e49620fd6f1fc7bb81b842924c9b3fe4de2d199dda1f5e72073d0e7c5792047b",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_5",
+    "name": "日天",
+    "filename": "image/⑤_5.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "9446f2ef1fc5ad5f914c24b8104ca44545b383d58f7ab6c785e9f48415c6ac51",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_6",
+    "name": "焔摩天",
+    "filename": "image/⑤_6.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "c8159d909ceaa1498c2af8345fdbdc94bed0a3f5325f1dd8f4d9218ce4e49b45",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_7",
+    "name": "地天",
+    "filename": "image/⑤_7.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "6530c69d22e35d18523745772bc99abef3ac5dfa3e7fddfee0f4ec27e8065575",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_8",
+    "name": "火天",
+    "filename": "image/⑤_8.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "05b57fc13bf7133ad82e5406a9e07dde6f60bb74afd0d4084fbb87ead3c8d4a0",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_9",
+    "name": "帝釈天",
+    "filename": "image/⑤_9.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "ee27e4c33816c429de5b45aff330cb75cea82630fe7c154de423272beae52d08",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_10",
+    "name": "伊舎那天",
+    "filename": "image/⑤_10.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "46b84e3e5e354c9c1a2ba888b69f4b6f82077563178df452b1d2f72eafae19c1",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_11",
+    "name": "月天",
+    "filename": "image/⑤_11.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "e8e9a790c88d7956951815a7862bf02748c91d84baad7726d93431337dfc8320",
+    "validation": "PASS"
+  },
+  {
+    "number": "⑤_12",
+    "name": "梵天",
+    "filename": "image/⑤_12.jpg",
+    "width": 768,
+    "height": 1376,
+    "dpi": [
+      96,
+      96
+    ],
+    "sha256": "6148a7cb219735cd4f3107e5a5f81456e89dd2dcc00de8158cd864ce636803a5",
+    "validation": "PASS"
+  }
+]
