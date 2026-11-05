@@ -1,0 +1,25 @@
+/* 管理者モード専用: 外部Googleシートの統計画面への入口 */
+#adminAnalytics[hidden], #analyticsSheetLink[hidden] { display: none !important; }
+#adminAnalytics {
+  margin: 16px auto 20px;
+  padding: 16px;
+  width: min(100% - 24px, 580px);
+  box-sizing: border-box;
+  border: 1px solid rgba(108, 79, 133, .4);
+  background: #f7f3fb;
+  border-radius: 12px;
+  text-align: center;
+  color: #30283b;
+}
+#adminAnalytics h3 { margin: 0 0 9px; font-size: 1.1rem; }
+#analyticsSheetLink {
+  display: inline-block;
+  margin: 6px auto 8px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  color: white;
+  background: #55406d;
+  text-decoration: none;
+  font-weight: 700;
+}
+#analyticsStatus { margin: 8px 0 0; font-size: .9rem; line-height: 1.6; }
