@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>法楽寺おみくじ</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="analytics.css">
 </head>
 <body>
     <div class="container">
@@ -66,6 +67,13 @@
                 <button id="nextBtn" class="admin-btn" onclick="showNext()">次へ ▶</button>
             </div>
 
+            <!-- 管理者限定の統計閲覧。Google側でアクセス権を管理する。 -->
+            <section id="adminAnalytics" class="admin-analytics" hidden>
+                <h3>おみくじ実行統計</h3>
+                <a id="analyticsSheetLink" href="#" target="_blank" rel="noopener noreferrer" hidden>累計・当月・当年の集計を確認</a>
+                <p id="analyticsStatus" role="status">統計の接続状態を確認しています。</p>
+            </section>
+
             <div class="result-section">
                 <div id="resultCard" class="result-card">
                     <div id="resultNumber" class="result-number"></div>
@@ -98,6 +106,8 @@
         </div>
     </div>
 
-    <script src="script.js?v=20250101"></script>
+    <script src="script.js?v=20261105"></script>
+    <script src="analytics-config.js?v=20261105"></script>
+    <script src="analytics.js?v=20261105"></script>
 </body>
 </html>
