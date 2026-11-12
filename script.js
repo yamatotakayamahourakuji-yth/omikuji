@@ -344,12 +344,27 @@ function enableAdminMode() {
     loadViewCount();
     updateViewCountDisplay();
     
+    // 既存の管理者認証に成功してからだけ番号指定を開く。
+    const quickPanel = document.getElementById('adminQuickSelect');
+    const select = document.getElementById('adminResultSelect');
+    if (quickPanel && select) {
+        select.replaceChildren();
+        omikujiResults.forEach(function (result, index) {
+            const option = document.createElement('option');
+            option.value = String(index);
+            option.textContent = result.number + '番｜' + result.fortune;
+            select.appendChild(option);
+        });
+        quickPanel.hidden = false;
+    }
     showAdminResult(currentIndex);
 }
 
 function showAdminResult(index) {
     const result = omikujiResults[index];
     if (!result) return;
+    const select = document.getElementById('adminResultSelect');
+    if (select) select.value = String(index);
 
     const resultNumEl = document.getElementById('resultNumber');
     const resultFortuneEl = document.getElementById('resultFortune');
@@ -417,6 +432,20 @@ function showNext() {
         currentIndex++;
         showAdminResult(currentIndex);
     }
+}
+
+// =============================
+// 管理者専用・番号指定
+// =============================
+function jumpToAdminNumber() {
+    // 一般画面や未認証状態では管理用ジャンプを使用させない。
+    if (!isAdminMode || !isAdminEntryRoute()) return;
+    const select = document.getElementById('adminResultSelect');
+    if (!select) return;
+    const index = Number(select.value);
+    if (!Number.isInteger(index) || index < 0 || index >= omikujiResults.length) return;
+    currentIndex = index;
+    showAdminResult(index);
 }
 
 // =============================
