@@ -67,6 +67,13 @@
                 <button id="nextBtn" class="admin-btn" onclick="showNext()">次へ ▶</button>
             </div>
 
+            <!-- 管理者認証後のみ表示する54件の番号指定 -->
+            <div id="adminQuickSelect" class="admin-quick-select" hidden>
+                <label for="adminResultSelect">確認するおみくじ番号</label>
+                <select id="adminResultSelect" aria-label="確認する番号を選択"></select>
+                <button id="adminJumpButton" class="admin-btn" type="button" onclick="jumpToAdminNumber()">指定番号を表示</button>
+            </div>
+
             <!-- 管理者限定の統計閲覧。Google側でアクセス権を管理する。 -->
             <section id="adminAnalytics" class="admin-analytics" hidden>
                 <h3>おみくじ実行統計</h3>
@@ -106,7 +113,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=20261105"></script>
+    <script src="script.js?v=20261112-adminjump"></script>
     <script src="juniten.js?v=20261105"></script>
     <script src="analytics-config.js?v=20261106"></script>
     <script src="analytics.js?v=20261105"></script>

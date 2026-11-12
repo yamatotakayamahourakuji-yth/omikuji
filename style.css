@@ -610,6 +610,36 @@ body {
     color: #8b4513;
 }
 
+/* 管理者専用：54種類から直接選択（既存の前へ／次へを保持） */
+.admin-quick-select {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    margin: 8px 0 16px;
+    background: #f7f2e5;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+}
+.admin-quick-select[hidden] { display: none; }
+.admin-quick-select label { color: #5c4018; font-weight: bold; }
+.admin-quick-select select {
+    min-width: 165px;
+    max-width: 100%;
+    padding: 9px;
+    border: 1px solid #b08b33;
+    border-radius: 6px;
+    background: #fff;
+    color: #292115;
+    font-size: 16px;
+}
+@media (max-width: 480px) {
+    .admin-quick-select { flex-direction: column; align-items: stretch; }
+    .admin-quick-select select, .admin-quick-select button { width: 100%; }
+}
+
 /* レスポンシブ */
 @media (max-width: 480px) {
     .power-gauge-wrapper {
