@@ -3,7 +3,6 @@
 // ==========================
 
 // パスワード設定
-const normalPassword = "2026";
 const adminPassword = "2256";
 
 // モード / 管理変数
@@ -423,29 +422,33 @@ function showNext() {
 // =============================
 // パスワードチェック
 // =============================
+// 公開入口と管理入口を同じGitHub Pages内で分離する。
+// 注意: URLの区別とフロントエンドのパスワードは機密情報を保護する仕組みではない。
+function isAdminEntryRoute() {
+    return new URLSearchParams(window.location.search).get('mode') === 'admin';
+}
+
 function checkPassword() {
-    const input = document.getElementById('passwordInput').value;
+    // 一般入口ではパスワード不要。管理入口でのみ従来の認証画面を使用する。
+    if (!isAdminEntryRoute()) return;
+
+    const inputEl = document.getElementById('passwordInput');
+    const input = inputEl ? inputEl.value : '';
     const errorMsg = document.getElementById('errorMessage');
 
-    if (input === normalPassword) {
-        currentMode = 'normal';
-        isAdminMode = false;
-        sessionStorage.setItem('omikuji_auth', 'true');
-        sessionStorage.setItem('omikuji_mode', 'normal');
-    } else if (input === adminPassword) {
-        currentMode = 'admin';
-        isAdminMode = true;
-        sessionStorage.setItem('omikuji_auth', 'true');
-        sessionStorage.setItem('omikuji_mode', 'admin');
-    } else {
+    if (input !== adminPassword) {
         if (errorMsg) errorMsg.classList.add('show');
-        document.getElementById('passwordInput').value = '';
+        if (inputEl) inputEl.value = '';
         return;
     }
 
+    currentMode = 'admin';
+    isAdminMode = true;
+    sessionStorage.setItem('omikuji_auth', 'true');
+    sessionStorage.setItem('omikuji_mode', 'admin');
     if (errorMsg) errorMsg.classList.remove('show');
     showOmikujiScreen();
-    if (isAdminMode) enableAdminMode();
+    enableAdminMode();
 }
 
 // ページロード時の設定
@@ -510,18 +513,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // リロード時に認証セッションが残っていれば復帰
-    if (sessionStorage.getItem('omikuji_auth') === 'true') {
-        const savedMode = sessionStorage.getItem('omikuji_mode');
-        if (savedMode === 'normal') {
-            currentMode = 'normal';
-            isAdminMode = false;
-        } else if (savedMode === 'admin') {
+    // 管理URLだけが管理用パスワード画面を表示する。
+    if (isAdminEntryRoute()) {
+        const title = document.querySelector('.password-title');
+        if (title) title.textContent = '法楽寺おみくじ 管理者ログイン';
+
+        if (sessionStorage.getItem('omikuji_auth') === 'true' &&
+            sessionStorage.getItem('omikuji_mode') === 'admin') {
             currentMode = 'admin';
             isAdminMode = true;
+            showOmikujiScreen();
+            enableAdminMode();
+        } else {
+            // 一般用セッションを管理者認証に流用させない。
+            sessionStorage.removeItem('omikuji_auth');
+            sessionStorage.removeItem('omikuji_mode');
         }
+    } else {
+        // 一般参拝者はログインなしで開始。管理画面から戻っても一般モードに固定する。
+        currentMode = 'normal';
+        isAdminMode = false;
+        sessionStorage.setItem('omikuji_auth', 'true');
+        sessionStorage.setItem('omikuji_mode', 'normal');
         showOmikujiScreen();
-        if (isAdminMode) enableAdminMode();
     }
 });
 
