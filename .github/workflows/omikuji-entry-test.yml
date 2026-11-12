@@ -1,0 +1,23 @@
+name: omikuji 2027 entry regression
+on:
+  pull_request:
+    paths:
+      - 'script.js'
+      - 'analytics.js'
+      - 'juniten.js'
+      - 'tests/public-admin-entry.test.cjs'
+      - '.github/workflows/omikuji-entry-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-entry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/public-admin-entry.test.cjs
